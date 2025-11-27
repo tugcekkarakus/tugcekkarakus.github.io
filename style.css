@@ -1,10 +1,21 @@
 :root {
-    --bg-color: #0a192f;
-    --text-color: #8892b0;
-    --heading-color: #ccd6f6;
-    --accent-color: #64ffda; /* Gold-ish Green for Fintech vibe, or pure Gold #ffd700 */
-    --accent-gold: #ffd700;
-    --card-bg: #112240;
+    /* Mercedes-AMG Petronas F1 Palette */
+    --bg-color: #f8f9fa;
+    /* Light Silver/White */
+    --text-color: #333333;
+    /* Dark Grey for readability */
+    --heading-color: #000000;
+    /* Black */
+    --accent-color: #00D2BE;
+    /* Petronas Green */
+    --accent-secondary: #000000;
+    /* Black accents */
+    --card-bg: #ffffff;
+    /* White cards */
+    --navbar-bg: #000000;
+    /* Black Navbar */
+    --footer-bg: #000000;
+    /* Black Footer */
     --font-main: 'Outfit', sans-serif;
 }
 
@@ -15,71 +26,98 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--heading-color);
     font-weight: 700;
 }
 
 /* Navbar */
 .navbar {
-    background-color: rgba(10, 25, 47, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: var(--navbar-bg);
     padding: 1rem 0;
     transition: all 0.3s ease;
+    border-bottom: 2px solid var(--accent-color);
+    /* Petronas Green border */
 }
 
 .navbar-brand {
-    color: var(--accent-gold) !important;
+    color: #ffffff !important;
     font-size: 1.5rem;
-    border: 2px solid var(--accent-gold);
+    border: 2px solid var(--accent-color);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 .nav-link {
-    color: var(--heading-color) !important;
+    color: #ffffff !important;
+    /* White text for black navbar */
     font-size: 0.9rem;
     margin-left: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--accent-gold) !important;
+    color: var(--accent-color) !important;
 }
 
 /* Hero Section */
 #hero {
     min-height: 100vh;
     padding-top: 80px;
+    /* Light gradient overlay on image */
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)), url('images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #000;
 }
 
 #hero h1 {
-    font-size: 4rem;
-    color: var(--heading-color);
+    font-size: 4.5rem;
+    color: #000000;
+    text-shadow: none;
 }
 
 #hero .lead {
-    color: var(--accent-gold);
-    font-size: 1.5rem;
-    font-weight: 300;
+    color: #000000;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-shadow: none;
 }
 
 .btn-outline-gold {
-    color: var(--accent-gold);
-    border-color: var(--accent-gold);
+    /* Renamed conceptually but keeping class for HTML compatibility */
+    color: #000000;
+    border: 2px solid var(--accent-color);
+    background-color: transparent;
+    padding: 12px 30px;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .btn-outline-gold:hover {
-    background-color: rgba(255, 215, 0, 0.1);
-    color: var(--accent-gold);
+    background-color: var(--accent-color);
+    color: #000000;
+    box-shadow: 0 0 15px rgba(0, 210, 190, 0.4);
+    border-color: var(--accent-color);
 }
 
-/* About Section */
+/* Section Styling */
+section {
+    padding: 100px 0;
+}
+
 .section-title {
     position: relative;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #000;
 }
 
 .section-title::after {
@@ -87,73 +125,170 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: -10px;
     left: 0;
-    width: 60px;
-    height: 3px;
-    background-color: var(--accent-gold);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
 }
 
 .text-muted-light {
-    color: var(--text-color);
+    color: #555555;
+    /* Darker grey for light theme */
+    font-size: 1.1rem;
 }
 
-.about-img-placeholder {
-    width: 250px;
-    height: 250px;
-    border: 2px solid var(--accent-gold);
-    background-color: var(--card-bg);
-    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+/* About Section */
+.about-img-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
 }
 
-.text-gold {
-    color: var(--accent-gold);
+.about-img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 210, 190, 0.1);
+    /* Petronas Green tint */
+    transition: all 0.3s ease;
 }
 
-/* Vision Section */
+.about-img-container:hover::after {
+    background-color: transparent;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-img-container:hover .about-img {
+    transform: scale(1.05);
+}
+
+/* Skills Section */
 .bg-darker {
-    background-color: #020c1b;
+    background-color: #e9ecef;
+    /* Light Grey for alternate sections */
 }
 
+.skill-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    border: 1px solid var(--accent-color);
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.skill-tag:hover {
+    background-color: var(--accent-color);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 210, 190, 0.3);
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid #ccc;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.timeline-date {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Vision Cards */
 .fintech-card {
     background-color: var(--card-bg);
-    border: none;
+    border: 1px solid #eee;
     border-radius: 10px;
+    padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fintech-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+    box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+}
+
+.fintech-card .card-title {
+    color: var(--heading-color);
+}
+
+.text-gold {
+    color: var(--accent-color) !important;
+    /* Override gold class to use Petronas Green */
 }
 
 /* Contact Section */
 .social-link {
-    color: var(--heading-color);
+    color: #000;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-link:hover {
-    color: var(--accent-gold);
+    color: var(--accent-color);
     transform: translateY(-5px);
 }
 
 /* Footer */
 footer {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border-top: 1px solid #233554 !important;
+    background-color: var(--footer-bg);
+    color: #ffffff;
+    /* White text */
+    border-top: 2px solid var(--accent-color) !important;
+}
+
+footer .text-muted {
+    color: #cccccc !important;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     #hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
+
     .navbar-nav {
-        background-color: var(--card-bg);
+        background-color: var(--navbar-bg);
         padding: 1rem;
         border-radius: 5px;
         margin-top: 10px;
     }
+
     .nav-link {
         margin-left: 0;
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">TK</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -29,6 +32,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Yetenekler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#timeline">Kariyer</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#vision">Vizyon</a>
@@ -57,17 +66,78 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h2 class="section-title mb-4">Hakkımda</h2>
                     <p class="text-muted-light">
-                        Merhaba, ben Tuğçe. Finansal teknolojiler alanında yenilikçi çözümler üretmeye tutkulu biriyim. 
-                        Geleneksel finans anlayışını modern teknoloji ile birleştirerek, kullanıcı dostu ve güvenilir sistemler tasarlamayı hedefliyorum.
+                        Merhaba, ben Tuğçe. Finansal teknolojiler alanında yenilikçi çözümler üretmeye tutkulu biriyim.
+                        Geleneksel finans anlayışını modern teknoloji ile birleştirerek, kullanıcı dostu ve güvenilir
+                        sistemler tasarlamayı hedefliyorum.
                     </p>
                     <p class="text-muted-light">
-                        Amacım, fintech ekosisteminde sürdürülebilir ve ölçeklenebilir projelerle fark yaratmak.
+                        Amacım, fintech ekosisteminde sürdürülebilir ve ölçeklenebilir projelerle fark yaratmak. Veri
+                        analitiği, blokzincir ve yapay zeka gibi teknolojileri kullanarak finansın geleceğine yön
+                        veriyorum.
                     </p>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <div class="about-img-placeholder rounded-circle mx-auto d-flex align-items-center justify-content-center">
-                        <i class="fas fa-user-tie fa-5x text-gold"></i>
+                    <div class="about-img-container">
+                        <img src="images/about-innovation.png" alt="Fintech Innovation" class="about-img rounded">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-darker">
+        <div class="container py-5">
+            <h2 class="section-title mb-5">Yetenekler & Uzmanlıklar</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4 class="mb-3">Teknik Yetkinlikler</h4>
+                    <div class="d-flex flex-wrap">
+                        <span class="skill-tag">Fintech Analizi</span>
+                        <span class="skill-tag">Blockchain</span>
+                        <span class="skill-tag">Veri Bilimi</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">API Entegrasyonu</span>
+                        <span class="skill-tag">Siber Güvenlik Temelleri</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3">Profesyonel Beceriler</h4>
+                    <div class="d-flex flex-wrap">
+                        <span class="skill-tag">Proje Yönetimi</span>
+                        <span class="skill-tag">Stratejik Planlama</span>
+                        <span class="skill-tag">İnovasyon Yönetimi</span>
+                        <span class="skill-tag">Takım Liderliği</span>
+                        <span class="skill-tag">Problem Çözme</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title mb-5">Kariyer Yolculuğum</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Günümüz</div>
+                    <h4 class="mb-2">Fintech İnovasyon Uzmanı</h4>
+                    <p class="text-muted-light">Yeni nesil ödeme sistemleri ve dijital bankacılık çözümleri üzerine
+                        çalışmalar.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <h4 class="mb-2">Finansal Analist</h4>
+                    <p class="text-muted-light">Veri odaklı pazar analizi ve yatırım stratejileri geliştirme.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2021</div>
+                    <h4 class="mb-2">Eğitim & Gelişim</h4>
+                    <p class="text-muted-light">Finans ve Teknoloji alanında lisans eğitimi ve sertifika programları.
+                    </p>
                 </div>
             </div>
         </div>
@@ -84,7 +154,8 @@
                             <i class="fas fa-lightbulb fa-3x text-gold"></i>
                         </div>
                         <h4 class="card-title mb-3">İnovasyon</h4>
-                        <p class="card-text text-muted-light">Sürekli değişen dünyada en yeni teknolojileri takip ederek finansal süreçleri iyileştirmek.</p>
+                        <p class="card-text text-muted-light">Sürekli değişen dünyada en yeni teknolojileri takip ederek
+                            finansal süreçleri iyileştirmek.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -93,7 +164,8 @@
                             <i class="fas fa-shield-alt fa-3x text-gold"></i>
                         </div>
                         <h4 class="card-title mb-3">Güven</h4>
-                        <p class="card-text text-muted-light">Kullanıcı verilerini ve varlıklarını en üst düzeyde koruyan güvenli altyapılar kurmak.</p>
+                        <p class="card-text text-muted-light">Kullanıcı verilerini ve varlıklarını en üst düzeyde
+                            koruyan güvenli altyapılar kurmak.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -102,7 +174,8 @@
                             <i class="fas fa-chart-line fa-3x text-gold"></i>
                         </div>
                         <h4 class="card-title mb-3">Büyüme</h4>
-                        <p class="card-text text-muted-light">Hem bireysel hem de kurumsal ölçekte finansal özgürlüğü ve büyümeyi desteklemek.</p>
+                        <p class="card-text text-muted-light">Hem bireysel hem de kurumsal ölçekte finansal özgürlüğü ve
+                            büyümeyi desteklemek.</p>
                     </div>
                 </div>
             </div>
@@ -135,4 +208,5 @@
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
+
 </html>
