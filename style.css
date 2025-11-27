@@ -1,0 +1,160 @@
+:root {
+    --bg-color: #0a192f;
+    --text-color: #8892b0;
+    --heading-color: #ccd6f6;
+    --accent-color: #64ffda; /* Gold-ish Green for Fintech vibe, or pure Gold #ffd700 */
+    --accent-gold: #ffd700;
+    --card-bg: #112240;
+    --font-main: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--accent-gold) !important;
+    font-size: 1.5rem;
+    border: 2px solid var(--accent-gold);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link {
+    color: var(--heading-color) !important;
+    font-size: 0.9rem;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-gold) !important;
+}
+
+/* Hero Section */
+#hero {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    color: var(--heading-color);
+}
+
+#hero .lead {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.btn-outline-gold {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: var(--accent-gold);
+}
+
+/* About Section */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-gold);
+}
+
+.text-muted-light {
+    color: var(--text-color);
+}
+
+.about-img-placeholder {
+    width: 250px;
+    height: 250px;
+    border: 2px solid var(--accent-gold);
+    background-color: var(--card-bg);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+.text-gold {
+    color: var(--accent-gold);
+}
+
+/* Vision Section */
+.bg-darker {
+    background-color: #020c1b;
+}
+
+.fintech-card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fintech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+/* Contact Section */
+.social-link {
+    color: var(--heading-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--accent-gold);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-top: 1px solid #233554 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    .navbar-nav {
+        background-color: var(--card-bg);
+        padding: 1rem;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .nav-link {
+        margin-left: 0;
+    }
+}
